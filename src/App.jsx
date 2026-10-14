@@ -1,5 +1,6 @@
 import Navbar from './components/NavBar/Navbar';
 import AlumnoCard from './components/AlumnoCard';
+import Contador from './components/Contador/Contador';
 
 import './App.css';
 
@@ -18,17 +19,17 @@ function App() {
           <AlumnoCard 
             nombre="Daniel " 
             carrera="Desarrollo de Software" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
           <AlumnoCard 
             nombre="Maria " 
             carrera="Diseño Grafico" 
-            estado="Inactivo" 
+            estadoInicial="Inactivo" 
           />
           <AlumnoCard 
             nombre="Carlos " 
             carrera="Administracion Industrial" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
         </div>
 
@@ -37,17 +38,17 @@ function App() {
           <AlumnoCard 
             nombre="enciso" 
             carrera="Ingenieria de Software con IA" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
           <AlumnoCard 
             nombre="Luis " 
             carrera="Redes y Seguridad" 
-            estado="Inactivo" 
+            estadoInicial="Inactivo" 
           />
           <AlumnoCard 
             nombre="Ana " 
             carrera="Diseño y Desarrollo de Software" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
         </div>
 
@@ -56,20 +57,21 @@ function App() {
           <AlumnoCard 
             nombre="Jorge " 
             carrera="Mecatronica Industrial" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
           <AlumnoCard 
             nombre="Lucia " 
             carrera="Administracion de Empresas" 
-            estado="Inactivo" 
+            estadoInicial="Inactivo" 
           />
           <AlumnoCard 
             nombre="Pedro Castillo" 
             carrera="Soporte de TICs" 
-            estado="Matriculado" 
+            estadoInicial="Matriculado" 
           />
         </div>
 
+        <Contador />
       </div>
     </>
   );

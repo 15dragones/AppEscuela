@@ -1,6 +1,11 @@
-const AlumnoCard = ({ nombre, carrera, estado }) => {
-  // Lógica simple para cambiar el color del badge según el estado
+import { useState } from 'react';
+
+const AlumnoCard = ({ nombre, carrera, estadoInicial }) => {
+  const [estado, setEstado] = useState(estadoInicial);
   const badgeColor = estado === 'Matriculado' ? 'bg-success' : 'bg-secondary';
+  const cambiarEstado = () => {
+    setEstado(estado === 'Matriculado' ? 'Inactivo' : 'Matriculado');
+  };
 
   return (
     <div className="col-md-4 mb-3">
@@ -12,7 +17,13 @@ const AlumnoCard = ({ nombre, carrera, estado }) => {
           <div className="d-flex justify-content-between align-items-center">
             <span className={`badge ${badgeColor}`}>{estado}</span>
             <div>
-              <button className="btn btn-sm btn-outline-warning me-2">Editar</button>
+              <button
+                className="btn btn-sm btn-outline-info me-2"
+                onClick={cambiarEstado}
+                type="button"
+              >
+                Cambiar Estado
+              </button>
               <button className="btn btn-sm btn-outline-danger">Eliminar</button>
             </div>
           </div>
