@@ -1,5 +1,6 @@
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/NavBar/Navbar';
 import AlumnoCard from './components/AlumnoCard';
+
 import './App.css';
 
 function App() {
